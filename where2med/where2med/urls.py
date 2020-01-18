@@ -23,4 +23,4 @@ urlpatterns = [
     path('scheduling/', include("scheduling.urls")),
     path('admin/', include("admin_dashboard.urls")),
     
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
