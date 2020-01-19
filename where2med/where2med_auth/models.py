@@ -14,13 +14,13 @@ class MedicalCenter(models.Model):
     address = models.CharField(max_length=254)
     city = models.CharField(max_length=254)
     phone = models.CharField(max_length=10)
-    image = models.ImageField(
-        upload_to=get_image_file_path,
-        height_field="image_heigth",
-        width_field="image_width",
-    )
-    image_heigth = models.IntegerField(default=0, editable=False)
-    image_width = models.IntegerField(default=0, editable=False)
+    # image = models.ImageField(
+    #     upload_to=get_image_file_path,
+    #     height_field="image_heigth",
+    #     width_field="image_width",
+    # )
+    #image_heigth = models.IntegerField(default=0, editable=False)
+    #image_width = models.IntegerField(default=0, editable=False)
     cost_per_consult = models.DecimalField(max_digits=8, decimal_places=2)
     rating = models.FloatField(default=0.0)
     created_at = models.DateTimeField(default=now, editable=False)
@@ -49,13 +49,13 @@ class Admin(models.Model):
     last_name = models.CharField(max_length=254)
     address = models.CharField(max_length=254)
     medical_center = models.ForeignKey(MedicalCenter, on_delete=models.CASCADE)
-    image = models.ImageField(
-        upload_to=get_image_file_path,
-        height_field="image_heigth",
-        width_field="image_width",
-    )
-    image_heigth = models.IntegerField(default=0, editable=False)
-    image_width = models.IntegerField(default=0, editable=False)
+    # image = models.ImageField(
+    #     upload_to=get_image_file_path,
+    #     height_field="image_heigth",
+    #     width_field="image_width",
+    # )
+    # image_heigth = models.IntegerField(default=0, editable=False)
+    # image_width = models.IntegerField(default=0, editable=False)
     created_at = models.DateTimeField(default=now, editable=False)
     updated_at = models.DateTimeField(default=now, editable=False)
 

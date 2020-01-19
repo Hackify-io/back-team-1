@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %} Sign Up {% endblock %}
+
+{% block content %}
+<div class="container">
+  <div class="notification">
+    <h3 class="title is-size3">{{ message }}</h3>
+    <form method="POST">
+      {% csrf_token %} {{ form }}
+      <br />
+      <br />
+      <button type="reset" class="btn">Cancel</button>
+      <button type="submit" class="btn btn-primary">Sign Up</button>
+    </form>
+  </div>
+</div>
+{% endblock %}

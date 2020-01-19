@@ -21,7 +21,7 @@ from django.conf.urls.static import static
 urlpatterns = [
     path("djangoadmin/", admin.site.urls),
     path("auth/", include("where2med_auth.urls")),
-    path("", include("home_page.urls")),
+    path("", include("home_page.urls"),name="home_page"),
     path("scheduling/", include("scheduling.urls")),
     path("admin/", include("admin_dashboard.urls")),
 ] + (
