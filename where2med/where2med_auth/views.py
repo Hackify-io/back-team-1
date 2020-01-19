@@ -135,7 +135,8 @@ def Signup_MedicalCenter(request):
 
                 #create patitient
                 admin = Admin.objects.create(
-                    user=user
+                    user=user,
+                    medical_center=medical_center
                 )
 
                 admin.save()
