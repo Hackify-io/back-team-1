@@ -33,13 +33,13 @@ class Patient(models.Model):
     last_name = models.CharField(max_length=254)
     phone = models.CharField(max_length=254)
     city = models.CharField(max_length=254)
-    image = models.ImageField(
-        upload_to=get_image_file_path,
-        height_field="image_heigth",
-        width_field="image_width",
-    )
-    image_heigth = models.IntegerField(default=0, editable=False)
-    image_width = models.IntegerField(default=0, editable=False)
+    # image = models.ImageField(
+    #    upload_to=get_image_file_path,
+    #    height_field="image_heigth",
+    #    width_field="image_width",
+    # )
+    # image_heigth = models.IntegerField(default=0, editable=False)
+    # image_width = models.IntegerField(default=0, editable=False)
     created_at = models.DateTimeField(default=now, editable=False)
     updated_at = models.DateTimeField(default=now, editable=False)
 
