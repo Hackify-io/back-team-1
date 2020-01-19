@@ -46,3 +46,8 @@ def search(request):
     serializer = MedicalCenterSerializer(centers)
 
     return Response(serializer.data)
+
+
+def search_page(request):
+
+    return render(request, "home_page/search.html", {})
