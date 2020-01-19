@@ -27,6 +27,14 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+# Application definition
+REST_FRAMEWORK = {
+    "DEFAULT_AUTHENTICATION_CLASSES": [
+        "rest_framework.authentication.TokenAuthentication"
+    ]
+}
+
+
 
 # Application definition
 
@@ -40,7 +48,9 @@ INSTALLED_APPS = [
     'where2med_auth',
     'home_page',
     'scheduling',
-    'admin_dashboard'
+    'admin_dashboard',
+    'rest_framework',
+    'rest_framework.authtoken',
 ]
 
 MIDDLEWARE = [
